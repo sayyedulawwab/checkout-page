@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+
+    <link rel="icon" href="devchallenges.png" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <title>Checkout Page</title>
+  </head>
+  <body>
+    <h1 class="checkout-header">Checkout</h1>
+    <div class="content">
+      <aside>
+        <!--First item-->
+        <div class="checkout-item">
+          <img src="./photo1.png" alt="backpack" />
+
+          <div class="checkout-item__info">
+            <h4>Vintage Backbag</h4>
+            <span class="checkout-item__price">
+              <h3>$54.99</h3>
+              <h5>$94.99</h5>
+            </span>
+            <div class="checkout-item__range">
+              <button id="decreaseBtn"><i class="fas fa-minus"></i></button>
+
+              <input type="number" class="input" value="1" min="1" />
+              <button id="increaseBtn"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!--Second item-->
+        <div class="checkout-item">
+          <img src="./photo2.png" alt="levi shoes" />
+
+          <div class="checkout-item__info">
+            <h4>Levi Shoes</h4>
+            <span class="checkout-item__price">
+              <h3>$74.99</h3>
+              <h5>$124.99</h5>
+            </span>
+            <div class="checkout-item__range">
+              <button id="decreaseBtn"><i class="fas fa-minus"></i></button>
+
+              <input type="number" class="input" value="1" min="1" />
+              <button id="increaseBtn"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-item__price--finish">
+          <div class="checkout-item__shipping">
+            <h2>Shipping</h2>
+            <h2>$19</h2>
+          </div>
+          <div class="checkout-item__total">
+            <h2>Total</h2>
+            <h2>$148.98</h2>
+          </div>
+        </div>
+      </aside>
+      <main>
+        <form>
+          <fieldset class="contact-info">
+            <legend>Contact infomation</legend>
+            <div class="form-field">
+              <label>E-mail</label>
+              <input type="email" name="email" placeholder="Enter your email..." required />
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="form-field">
+              <label>Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="Enter your phone..."
+                required
+              />
+              <i class="fas fa-phone-alt"></i>
+            </div>
+          </fieldset>
+
+          <fieldset class="shipping-info">
+            <legend>Shipping address</legend>
+
+            <div class="form-field">
+              <label>Full Name</label>
+              <input class="darker" type="text" placeholder="Rodney Cotton" required />
+              <i class="fas fa-user-circle"></i>
+            </div>
+
+            <div class="form-field">
+              <label>Address</label>
+              <input type="text" placeholder="Your address.." required />
+              <i class="fas fa-home"></i>
+            </div>
+
+            <div class="form-field">
+              <label>City</label>
+              <input type="text" placeholder="Your city" required />
+              <i class="fas fa-city"></i>
+            </div>
+
+            <div class="form-field flex">
+              <div class="country">
+                <label>Country</label>
+                <select name="" id="">
+                  <option value="Your country.." selected disabled>Your country..</option>
+                  <option value="Bangladesh">Bangladesh</option>
+                  <option value="USA">USA</option>
+                  <option value="Canada">Canada</option>
+                </select>
+                <i class="fas fa-globe-europe"></i>
+              </div>
+
+              <div class="postal">
+                <label>Postal code</label>
+                <input type="text" placeholder="Your postal code.." required />
+                <i class="fas fa-industry"></i>
+              </div>
+            </div>
+
+            <div class="form-field flex">
+              <input type="checkbox" id="checkbox" />
+              <label for="checkbox">Save this information for next time</label>
+            </div>
+
+            <input type="submit" value="Continue" onsubmit="alert('successful')" />
+          </fieldset>
+        </form>
+      </main>
+    </div>
+    <footer>
+      <p>created by <a href="https://github.com/sayyedulbappy" target="blank">sayyedulbappy</a> - devChallenges.io</p>
+    </footer>
+  </body>
+</html>
