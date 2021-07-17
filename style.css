@@ -61,6 +61,7 @@ input {
 .checkout-item {
   display: flex;
   padding: 1.6rem;
+  flex-wrap: wrap;
 }
 
 .checkout-item:first-of-type {
